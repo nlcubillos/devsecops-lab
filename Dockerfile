@@ -1,7 +1,7 @@
 # ============================================
 # ETAPA 1: Build y Test
 # ============================================
-FROM node:20-alpine AS builder
+FROM node:20.18-alpine AS builder
 
 WORKDIR /app
 
@@ -14,7 +14,7 @@ RUN npm test
 # ============================================
 # ETAPA 2: Producción
 # ============================================
-FROM node:20-alpine AS production
+FROM node:20.18-alpine AS production
 
 WORKDIR /app
 
